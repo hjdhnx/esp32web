@@ -56,5 +56,8 @@ async def static(request, path):
     if '..' in path or not file_exists(file_path):
         # directory traversal is not allowed
         return 'Not found', 404
-
+    if str(path).endswith('.svg'):
+        with open(file_path, encoding='utf-8') as f:
+            content = f.read()
+        return Response(content, headers={'content-type': 'image/svg+xml'})
     return send_file(file_path, max_age=86400)
