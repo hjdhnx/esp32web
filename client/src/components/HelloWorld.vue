@@ -50,8 +50,12 @@ const count = ref(0)
     >.
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
-  <el-button @click="goto_demo">跳转到demo路由</el-button>
-  <el-button @click="goto_login">跳转到登录页面</el-button>
+  <div class="btn-group">
+    <van-button @click="goto_demo">跳转到demo路由</van-button>
+    <van-button @click="goto_login">跳转到登录页面</van-button>
+    <el-button @click="goto_login">跳转到登录页面</el-button>
+  </div>
+
 </template>
 
 <style scoped>
@@ -72,5 +76,9 @@ const count = ref(0)
 
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.btn-group > *{
+  margin: 1rem;
 }
 </style>

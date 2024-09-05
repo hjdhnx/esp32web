@@ -7,8 +7,8 @@ import {Icon} from 'vant';
 import 'vant/lib/index.css';
 // 导入router配置文件
 import router from "./router"
-// 导入阿里图标
-import './assets/font/iconfont.css'
+// 导入阿里图标->太大了esp32受不了
+// import './assets/font/iconfont.css'
 // 导入vuex,后面换pinia
 // import store from './store'
 
