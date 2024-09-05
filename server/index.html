@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<html>
+<head>
+    <title>连接wifi</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>连接wifi</h1>
+<p>请输入wifi名称和密码</p>
+<form method="post" action="/wifi/save">
+    <p>
+        wifi名称:
+        <input name="wifiname" id='wifiname' autofocus/>
+    </p>
+    <p>
+        wifi密码:
+        <input name="wifipwd" autofocus/>
+    </p>
+    <input name="submitBtn" id='submitBtn' type="submit" value="确定" class="disabled"/>
+</form>
+<p><a href="/wifi/disconnect">断开wifi连接</a></p>
+<p><a href="/wifi/connect">连接wifi</a></p>
+<p><a href="/wifi/scan">扫描wifi</a></p>
+<p><a href="/wifi/info">查看wifi连接信息</a></p>
+<p><a href="/wifi/ip">获取公网ip</a></p>
+<p><a href="/wifi/ip2">获取公网ip-完整信息</a></p>
+<style>
+    .disabled {
+        background-color: grey;
+        pointer-events: none; /* 防止按钮被点击 */
+    }
+</style>
+<script>
+    document.getElementById('wifiname').addEventListener('input', function () {
+        var inputField = document.getElementById('wifiname');
+        var submitBtn = document.getElementById('submitBtn');
+
+        if (inputField.value.trim() !== '') {
+            // 如果输入框中有内容，则启用按钮
+            submitBtn.classList.remove('disabled');
+        } else {
+            // 如果输入框中没有内容，则禁用按钮
+            submitBtn.classList.add('disabled');
+        }
+    });
+</script>
+</body>
+</html>
