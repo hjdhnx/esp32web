@@ -27,6 +27,15 @@ async def index(request):
     return Response(content, headers={'content-type': Response.default_content_type})
 
 
+@app.route('/index')
+async def vue_index(request):
+    file_path = path_join(BASE_DIR, 'dist/', 'index.html')
+    # print(file_path)
+    with open(file_path, encoding='utf-8') as f:
+        content = f.read()
+    return Response(content, headers={'content-type': Response.default_content_type})
+
+
 @app.before_request
 async def start_timer(request):
     t1 = time.time()

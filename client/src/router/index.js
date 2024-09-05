@@ -23,8 +23,8 @@ const routes = [
 ]
 // 3.路由对象实例化
 const router = createRouter({
-    // history: createWebHashHistory(),
-    history: createWebHistory(), // 这样可以去掉 /#，但是python静态目录加载可能会出问题
+    history: createWebHashHistory(),//就用这个，避免下面那个打包后无法访问的问题
+    // history: createWebHistory(), // 这样可以去掉 /#，但是python静态目录加载可能会出问题
     routes
 })
 // 暴露导出

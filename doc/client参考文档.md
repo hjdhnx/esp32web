@@ -44,4 +44,6 @@ yarn add pinia
 yarn add vant
 yarn add vue-router@4
 yarn add axios
+yarn add @vitejs/plugin-legacy
+yarn add terser
 ```

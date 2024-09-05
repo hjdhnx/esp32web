@@ -6,14 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "buildFile": "vite build && node toFile.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vitejs/plugin-legacy": "^5.4.2",
     "@vitejs/plugin-vue-jsx": "^4.0.1",
     "axios": "^1.7.7",
     "element-plus": "^2.8.1",
     "pinia": "^2.2.2",
     "sass": "^1.78.0",
+    "terser": "^5.31.6",
     "unplugin-auto-import": "^0.18.2",
     "unplugin-vue-components": "^0.27.4",
     "vant": "^4.9.4",
